@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infinite Text</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-size: 24px;
+        font-weight: bold;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p id="text"></p>
+    </div>
+    <script>
+      const text = "This text will repeat infinitely. ";
+      const textElement = document.getElementById("text");
+      let newText = "";
+
+      while (true) {
+        newText += text;
+        textElement.innerHTML = newText;
+      }
+    </script>
+  </body>
+</html>
